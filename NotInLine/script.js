@@ -50,29 +50,3 @@ function expand(id) {
   }
 }
 
-const swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
-  spaceBetween: 40,
-  direction: "horizontal",
-  loop: false,
-
-  containerModifierClass: "my-wrapper",
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-swiper.on("reachEnd", function () {
-  let buttonNext = document.getElementsByClassName("swiper-button-next");
-  buttonNext[0].style.display = "none";
-  let buttonPrev = document.getElementsByClassName("swiper-button-prev");
-  buttonPrev[0].style.display = "block";
-});
-
-swiper.on("reachBeginning", function () {
-  let buttonNext = document.getElementsByClassName("swiper-button-next");
-  buttonNext[0].style.display = "block";
-  let buttonPrev = document.getElementsByClassName("swiper-button-prev");
-  buttonPrev[0].style.display = "none";
-});
